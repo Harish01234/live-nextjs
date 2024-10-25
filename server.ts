@@ -25,6 +25,14 @@ app.prepare().then(() => {
     socket.on("minus", (payload) => {
       io.emit("minus", payload);
     });
+
+    socket.on("multiply", (payload) => {
+      io.emit("multiply", payload);
+    })
+
+    socket.on("divide", (payload) => {  
+      io.emit("divide", payload);
+    })
   });
 
   httpServer
